@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import CurrentWeather from './components/CurrentWeather';
+import HourlyForecast from './components/HourlyForecast';
+import FiveDayForecast from './components/FiveDayForecast';
+import Search from './components/Search';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [location, setLocation] = useState('New Delhi');
+    const [cityName, setCityName] = useState('New Delhi');
+
+    return (
+        <Router>
+            <div className="App">
+                <nav>
+                    <ul>
+                        <li><Link to="/">Current Weather</Link></li>
+                        <li><Link to="/hourly">Hourly Forecast</Link></li>
+                        <li><Link to="/five-day">5-Day Forecast</Link></li>
+                        <li><Link to="/search">Search by City</Link></li>
+                    </ul>
+                </nav>
+                <Routes>
+                    <Route exact path="/" element={<CurrentWeather setLocation={setLocation} setCityName={setCityName} />} />
+                    <Route path="/hourly" element={<HourlyForecast location={location} cityName={cityName} />} />
+                    <Route path="/five-day" element={<FiveDayForecast location={location} cityName={cityName} />} />
+                    <Route path="/search" element={<Search setLocation={setLocation} setCityName={setCityName} />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;

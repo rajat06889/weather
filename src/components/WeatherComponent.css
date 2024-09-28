@@ -1,0 +1,119 @@
+/* WeatherComponent.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+  }
+  
+  .weather-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('https://source.unsplash.com/1600x900/?weather'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 250px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .weather-data {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .hourly-forecast, .five-day-forecast {
+    margin-top: 20px;
+  }
+  
+  .hourly-list, .five-day-forecast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hour, .day {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #fff; /* White border */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  }
+  
+  .weather-data img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .loading-message, .error-message {
+    font-size: 1.2rem;
+    color: #f44336; /* Red color for errors */
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2.5rem;
+    }
+    
+    input[type="text"] {
+      width: 200px;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+
+  
+  .search-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: #218838;
+  }

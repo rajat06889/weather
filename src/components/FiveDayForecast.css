@@ -1,0 +1,45 @@
+.five-day-forecast {
+    padding: 20px;
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.five-day-forecast h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    /* color: #333; */
+    color: turquoise;
+}
+
+.five-day-forecast ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.five-day-forecast li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.five-day-forecast li:last-child {
+    border-bottom: none;
+}
+
+.five-day-forecast p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.five-day-forecast img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
